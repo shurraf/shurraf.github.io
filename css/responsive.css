@@ -1,6 +1,7 @@
 /* Responsive styles for the portfolio website */
 
 /* ===== Mobile (max-width: 768px) ===== */
+
 @media (max-width: 768px) {
   html, body {
     width: 100%;
@@ -72,6 +73,7 @@
     font-size: 1.8rem;
   }
 }
+
 
 /* ===== Desktop (min-width: 1025px) ===== */
 @media (min-width: 1025px) {

@@ -6,6 +6,115 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <title>Skills</title>
+    <style>
+        /* Core reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f7f8fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #222;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #f2f2f2;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #00bcd4;
+        }
+
+        main {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            margin-bottom: 40px;
+            color: #111;
+            position: relative;
+        }
+
+        h1::after {
+            content: "";
+            width: 60px;
+            height: 3px;
+            background: #00bcd4;
+            display: block;
+            margin: 10px auto 0;
+            border-radius: 3px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
+        }
+
+        .skill-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            .skill-card {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -15,24 +124,50 @@
                 <li><a href="education.html">Education</a></li>
                 <li><a href="experience.html">Experience</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="skills.html">Skills</a></li>
+                <li><a class="active" href="skills.html">Skills</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <h1>My Skills</h1>
-        <ul>
-            <li>HTML & CSS</li>
-            <li>JavaScript</li>
-            <li>Responsive Web Design</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>Git & GitHub</li>
-        </ul>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-name">HTML & CSS</div>
+                <p>Building clean, semantic, and responsive layouts.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-name">JavaScript</div>
+                <p>Interactive UI and logic-driven frontend development.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-name">Responsive Web Design</div>
+                <p>Designs that adapt seamlessly across devices.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-name">React</div>
+                <p>Component-based UI architecture for dynamic apps.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-name">Node.js</div>
+                <p>Server-side JavaScript with Express and REST APIs.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-name">Git & GitHub</div>
+                <p>Version control, collaboration, and project management.</p>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; 2023 Your Name. All rights reserved.</p>
+        <p>&copy; 2023 Rraf. All rights reserved.</p>
     </footer>
 </body>
 </html>

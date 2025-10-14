@@ -1,36 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/responsive.css">
-    <title>Education</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <title>Education</title>
+  <style>
+    /* Base layout */
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f9f9fb;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ===== Navbar ===== */
+    header {
+      background: #111;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00a2ff;
+    }
+
+    /* ===== Hamburger button ===== */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+      width: 30px;
+      height: 25px;
+    }
+
+    .bar {
+      height: 3px;
+      width: 100%;
+      background: white;
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* ===== Mobile Nav ===== */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #111;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+
+      nav ul.open {
+        max-height: 300px;
+        border-top: 1px solid #333;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    /* ===== Main Section ===== */
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: white;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      border-bottom: 3px solid #0078ff;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    .edu-card {
+      background: #f0f6ff;
+      border-left: 5px solid #0078ff;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .edu-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .edu-card h2 {
+      font-size: 1.4rem;
+      color: #0078ff;
+      margin-bottom: 0.5rem;
+    }
+
+    .edu-card p {
+      color: #555;
+      margin: 0.4rem 0;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: #111;
+      color: #bbb;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+      .edu-card {
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="https://github.com/shurraf" target="_blank" rel="noopener">GitHub</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Education</h1>
-        <section>
-            <h2>Degree Title</h2>
-            <p>University Name, Year of Graduation</p>
-            <p>Relevant coursework: Course 1, Course 2, Course 3</p>
-            <p>Additional details about your education background can be added here.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Your Name</p>
-    </footer>
+  <header>
+    <div class="logo">Rraf Hasan</div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <nav>
+      <ul id="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://github.com/shurraf" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Education</h1>
+
+    <section class="edu-card">
+      <h2>B.Sc. in Computer Science and Engineering</h2>
+      <p>
+        <strong>Rajshahi University of Engineering & Technology (RUET)</strong><br />
+        3rd Year, 6th Semester (Expected Graduation: 2027) | Current CGPA: 3.80/4.00
+      </p>
+      <p><strong>Key Coursework:</strong> Data Structures, Algorithms, Operating Systems, Artificial Intelligence, Computer Networks</p>
+    </section>
+
+    <section class="edu-card">
+      <h2>Higher Secondary Certificate (HSC)</h2>
+      <p>
+        <strong>Naogaon Govt. College, Naogaon, Rajshahi</strong><br />
+        Passed: 2021 | GPA: 5.00
+      </p>
+    </section>
+
+    <section class="edu-card">
+      <h2>Secondary School Certificate (SSC)</h2>
+      <p>
+        <strong>Naogaon K.D. Govt. High School, Naogaon, Rajshahi</strong><br />
+        Passed: 2019 | GPA: 5.00
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Md. Rraf Hasan — All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Toggle mobile nav
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+  </script>
 </body>
 </html>

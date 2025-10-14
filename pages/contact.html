@@ -1,36 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/responsive.css">
-    <title>Contact</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <title>Contact</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f9f9fb;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 3rem auto;
+      background: white;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 3px solid #0078ff;
+      display: inline-block;
+      padding-bottom: 0.25rem;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style: none;
+      margin: 1.5rem 0;
+      padding: 0;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+      font-size: 1rem;
+    }
+
+    ul li i {
+      color: #0078ff;
+      margin-right: 8px;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      background: #0078ff;
+      color: white;
+      text-decoration: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .contact-btn:hover {
+      background: #005fcc;
+    }
+
+    footer {
+      background: #111;
+      color: #bbb;
+      text-align: center;
+      padding: 4rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #009dff;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="skills.html">Skills</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h1>Contact Me</h1>
-            <p>If you would like to get in touch, feel free to reach out via the following methods:</p>
-            <ul>
-                <li>Mobile: (123) 456-7890</li>
-                <li>Email: example@example.com</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Your Name. All rights reserved.</p>
-    </footer>
+  <header>
+    <h2>Rraf Hasan</h2>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Contact Me</h1>
+      <p>If you’d like to get in touch, feel free to reach out through any of the following:</p>
+      <ul>
+        <li><i>📞</i><strong>Mobile:</strong> +880 1328-650716</li>
+        <li><i>📧</i><strong>Email:</strong> <a href="mailto:rrafshughran@gmail.com">rrafshughran@gmail.com</a></li>
+      </ul>
+      <a href="mailto:rrafshughran@gmail.com" class="contact-btn">Send an Email</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>📞 +880 1328-650716 | <a href="mailto:rrafshughran@gmail.com">rrafshughran@gmail.com</a></p>
+    <p>© 2025 Md. Rraf Hasan — All rights reserved.</p>
+  </footer>
 </body>
 </html>
