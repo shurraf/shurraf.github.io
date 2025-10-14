@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Md. Rraf Hasan | Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
   <header>
     <nav class="navbar">
       <h2 class="logo">Rraf Hasan</h2>
+
+      <!-- Hamburger Icon -->
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="pages/education.html">Education</a></li>
@@ -23,7 +32,7 @@
 
   <main>
     <section class="hero">
-      <img src="assets/Screenshot 2025-10-14 160836.png" alt="Rraf Hasan" class="profile-photo">
+      <img src="assets/Screenshot 2025-10-14 160836.png" alt="Rraf Hasan" class="profile-photo" />
       <div class="bio">
         <h1>Hi, I’m <span>Md. Rraf Hasan</span></h1>
         <p>I’m an undergraduate student in CSE at RUET, passionate about learning and exploring new technologies.</p>
@@ -38,5 +47,15 @@
       <p>© 2025 Md. Rraf Hasan — All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    const menu = document.querySelector('#mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    menu.addEventListener('click', () => {
+      menu.classList.toggle('is-active');
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
