@@ -1,59 +1,107 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+/* Navbar */
+.navbar {
+  background: #1a1a1a;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
 }
 
-nav {
-    margin: 20px 0;
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
+.nav-links a:hover,
+.nav-links a.active {
+  color: #00bcd4;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 90vh;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  padding: 40px 20px;
 }
 
 .profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-.bio {
-    margin: 20px 0;
-    font-size: 1.2em;
+.bio h1 {
+  font-size: 2rem;
+  color: #222;
 }
 
-.contact {
-    margin-top: 40px;
-    font-size: 1em;
+.bio h1 span {
+  color: #007acc;
 }
 
+.bio p {
+  color: #555;
+  max-width: 600px;
+  margin: 15px auto;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #007acc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #005b99;
+}
+
+/* Footer */
 footer {
-    margin-top: 20px;
-    padding: 10px 0;
-    background: #333;
-    color: #fff;
+  background: #1a1a1a;
+  color: #ccc;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #00bcd4;
+  text-decoration: none;
 }
